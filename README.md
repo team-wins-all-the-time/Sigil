@@ -23,3 +23,30 @@
 ![Page 1](https://github.com/team-wins-all-the-time/Sigil/blob/master/img/Notes_190222_164706_b95_1.jpg?raw=true)
 ![Page 2](https://github.com/team-wins-all-the-time/Sigil/blob/master/img/Notes_190222_164644_d1c_1.jpg?raw=true)
 ![Page 3](https://github.com/team-wins-all-the-time/Sigil/blob/master/img/Notes_190222_164612_90b_1.jpg?raw=true)
+
+===
+#Conflict Plan
+1).When the team encounters conflict, take a step back and have each team member think about the problem separately. Then come together to discuss each members' approach on how they would tackle the situation. 
+
+2).Two hour check in to touch base with team members. If members are falling behind according to our schedule, we will have a discussion during the check-ins to see what other members can do to help. 
+
+3). If our team is unable to solve a conflict, we will get in touch with TAs or Nicholas to get their opinions or how to come up with a solution. 
+
+===
+#Communication Plan
+
+1).All team members are available after 6pm through Slack and will be responsive to notifications. Bonnie teaches on Wednesdays and Thursdays from 7-9 and will be available after. 
+
+2).All team members will notify each other of changes and get approval from other teammates before making changes.
+
+3).To ensure that everyone is getting a chance to speak up and to create a psychologically safe envioronment, the word "CAROL" will be used to notify a team member when they are being too overpowering or unwilling to be open to others' ideas.
+
+===
+#Project Scope
+
+1).Index.html main page with history and about sigils
+2).Generator page with split theme
+3).About me/ gallery page
+
+
+
