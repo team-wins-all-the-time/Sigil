@@ -18,6 +18,7 @@
 8). As developers, we will provide a customized experience through our layout, color selection, and the random nature of our product. 
 
 === 
+
 #Wireframe Images 
 
 ![Page 1](https://github.com/team-wins-all-the-time/Sigil/blob/master/img/Notes_190222_164706_b95_1.jpg?raw=true)
