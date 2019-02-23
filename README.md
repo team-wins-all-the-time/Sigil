@@ -1,5 +1,4 @@
 # Sigil
-# Sigil
 
 # User Stories
 1).As a user who is unfamiliar with sigils, the main page will include an informative introduction to sigils in order to inform users about the app. The app will also be user friendly will clear instructions to minimize confusion. 
