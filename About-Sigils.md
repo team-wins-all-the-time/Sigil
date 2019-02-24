@@ -13,3 +13,24 @@ potential quotes to pull from Temptest:
 ideas for our symbols from Tempest's text: 
         Cave paintings included cross-temporarily/contentinentally signs such as astrisk's, cruciform's (t,x), triangles, finger fluting, zigzags, spirals, quadrangles, handprints, ovals, scalariforms(ladderlike), penniforms(featherlike), circles, cordiforms(heartshape), serpentiforms(snakelike, wavylines), dots, half-circles, parallel lines, grids/hashing#
    from Aboriginal Art: chevron, chevron w/ center line, oppositional j's ovals, connected rings, concentric circles, U shapes, 
+   
+   ===
+   http://sigildaily.com/activating-rituals/ 
+   ===
+   
+   === 
+   https://thetravelingwitch.com/blog/2016/12/21/creating-sigils
+   ===
+   ===
+   http://www.chaostarot.com/chaos-magick-sigil-generator/
+   ===
+   ===
+   https://hermetic.com/chaos/austin-osman-spare-and-his-theory-of-sigils
+   ===
+   ===
+   https://www.mookychick.co.uk/health/spirituality/magical_sigils.php
+   ===
+   ===
+   https://www.spiralnature.com/magick/sigil-magick-down-and-dirty/
+   ===
+   
