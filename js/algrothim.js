@@ -1,28 +1,10 @@
 
 'use strict';
-var left = document.querySelector('.left');
-var right = document.querySelector('.right');
-var container = document.querySelector('.container');
 
-left.addEventListener('mouseenter',() => {
-  container.classList.add('hover-left');
-});
-
-left.addEventListener('mouseleave',() => {
-  container.classList.remove('hover-left');
-});
-
-right.addEventListener('mouseenter',() => {
-  container.classList.add('hover-right');
-});
-
-right.addEventListener('mouseleave',() => {
-  container.classList.remove('hover-right');
-});
 
 //global vars
-  //user_string = user input;
-  //user_array = [];
+user_string = user input;
+user_array = [];
 
 //helper functions
 //random_number pulled from a previous project of mine.
@@ -35,9 +17,9 @@ function random_number (max_num, min_num) {
   //need to iterate through user string and turn it into individual letters.
   // then need to remove vowels and duplicate letters
 
-//user_array = array.from(user_string);
-//user_array.join(a,e,i,o,u)
-//arr.sort(user_array);
+user_array = array.from(newSet(user_array.split('')));
+user_array.join(a,e,i,o,u);x
+
 //var individual_letters = user_array[Symbol.iterator]();
 
 
@@ -75,6 +57,26 @@ var library ={
 //object instantnation(necessary?)
 
 //event lisiteners
+var left = document.querySelector('.left');
+var right = document.querySelector('.right');
+var container = document.querySelector('.container');
+
+left.addEventListener('mouseenter',() => {
+  container.classList.add('hover-left');
+});
+
+left.addEventListener('mouseleave',() => {
+  container.classList.remove('hover-left');
+});
+
+right.addEventListener('mouseenter',() => {
+  container.classList.add('hover-right');
+});
+
+right.addEventListener('mouseleave',() => {
+  container.classList.remove('hover-right');
+});
+
   //submit button
   
   //radio buttons
