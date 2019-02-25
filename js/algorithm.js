@@ -3,8 +3,12 @@
 
 
 //global vars
+<<<<<<< HEAD
 var user_string =  event.target.submit.value;
 console.log(event.target.submit.value);
+=======
+//user_string = user input;
+>>>>>>> 651bf0e899d4cae23ac4ee8218adf9cce91ae514
 var user_array = [];
 var sigil_array = [];
 
