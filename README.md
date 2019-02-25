@@ -49,5 +49,10 @@
 2).Generator page with split theme
 3).About me/ gallery page
 
+=== 
+# resources and sources 
+
+Set MDN Page: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+The Set data structure is vital for us, as it is the one line wonder that removes any duplicate letters from the user input.
 
 
