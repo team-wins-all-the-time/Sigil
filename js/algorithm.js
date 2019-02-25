@@ -4,8 +4,8 @@
 
 //global vars
 //user_string = user input;
-user_array = [];
-sigil_array = [];
+var user_array = [];
+var sigil_array = [];
 
 //helper functions
 
