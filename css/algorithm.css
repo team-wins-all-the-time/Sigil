@@ -1,9 +1,9 @@
 :root{
   --container-bg-color: #333;
-  --left-bg-color: rgba(43, 43, 43, 0.8);
+  --left-bg-color: rgba(44, 9, 65, 0.8);
   --right-bg-color:rgba(4, 145, 211, 0.8);
-  --hover-width: 75%;
-  --other-width: 25%;
+  --hover-width: 100%;
+  --other-width: 0%;
   --speed: 1000ms;
 }
 
@@ -41,7 +41,7 @@ h1{
 
 .split.left{
   left:0;
-  background:url('/img/dark2.jpg') center center no-repeat;
+  background:url('/img/dark.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -55,7 +55,7 @@ h1{
 
 .split.right{
   right:0;
-  background:url('/img/light2.jpg') center center no-repeat;
+  background:url('/img/light.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -72,7 +72,7 @@ h1{
 }
 
 .hover-left .left{
-  width:var(-hover-width);
+  width:var(--hover-width);
 }
 
 .hover-left .right{
@@ -91,7 +91,7 @@ h1{
   width:var(--other-width);
 }
 
-.hover-right .split.left:before{
+.hover-right .left:before{
   z-index:2;
 }
 
@@ -101,9 +101,24 @@ h1{
   }
 }
 
-#canvas-container{
-  background-color: white;
+#generator-container{
+  /* background-color: white; */
+  opacity:.8;
   position:absolute;
-  top:40%;
-  left:50%;
+  top:10%;
+  left:35%;
+}
+
+#input{
+  text-align: center;
+  margin-bottom:10%;
+}
+
+#mood{
+  display:block;
+  margin-top:5%;
+}
+
+#submit{
+  margin-top:5%;
 }
