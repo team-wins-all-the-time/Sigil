@@ -3,7 +3,7 @@
 
 
 //global vars
-//user_string = user input;
+user_string = submit.textContent
 user_array = [];
 sigil_array = [];
 
