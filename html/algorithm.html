@@ -11,16 +11,15 @@
 
 <body>
   <div class="container">
-    <div class="split left">
-      <h1>Side 1</h1>
-    </div>
+    
     <div class="split right">
-      <h1>Side 2</h1>
+      <h1></h1>
     </div>
-  </div>
+    <div class="split left">
+      <h1></h1>
+    </div>
   <section id="generator-container">
-    <div id="input">
-      <form>
+      <form id="form">
         <label for="text=input">Enter a word</label>
         <input type="text" id="" name="text-input">
 
@@ -31,18 +30,17 @@
           <label for="color-option2">Mood</label>
           <input type="radio" class="color" name="color-option2">
 
-          <label for="color-option2">Mood</label>
-          <input type="radio" class="color" name="color-option2">
-
           <label for="color-option3">Mood</label>
           <input type="radio" class="color" name="color-option3">
+
+          <label for="color-option4">Mood</label>
+          <input type="radio" class="color" name="color-option4">
        </div>
-       <input type="submit" id="submit" value="generate">
-        
-    </form>
-    </div>
+       <input type="submit" id="submit" value="generate">  
+      </form>
     <canvas id="generator" width="400" height="500"></canvas>
   </section>
+</div>
 
 <script src = "/js/algorithm.js" type = "text/javascript"></script>
 </body>

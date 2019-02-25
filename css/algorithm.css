@@ -1,7 +1,7 @@
 :root{
   --container-bg-color: #333;
   --left-bg-color: rgba(44, 9, 65, 0.8);
-  --right-bg-color:rgba(4, 145, 211, 0.8);
+  --right-bg-color:rgba(196, 215, 224, 0.3);
   --hover-width: 100%;
   --other-width: 0%;
   --speed: 1000ms;
@@ -59,7 +59,7 @@ h1{
   background-size: cover;
 }
 
-.split .right:before{
+.split.right:before{
   position:absolute;
   content:"";
   width:100%;
@@ -79,9 +79,9 @@ h1{
   width:var(--other width);
 }
 
-.hover-left .right:before{
+/* .hover-left .right:before{
   z-index:2;
-}
+} */
 
 .hover-right .right{
   width: var(--hover-width);
@@ -91,27 +91,22 @@ h1{
   width:var(--other-width);
 }
 
-.hover-right .left:before{
+/* .hover-right .left:before{
   z-index:2;
-}
+} */
 
-@media(max-width:800px){
+/* @media(max-width:800px){
   h1{
     font-size: 2rem;
   }
-}
+} */
 
 #generator-container{
   /* background-color: white; */
   opacity:.8;
   position:absolute;
-  top:10%;
-  left:35%;
-}
-
-#input{
-  text-align: center;
-  margin-bottom:10%;
+  top:3%;
+  left:36%;
 }
 
 #mood{
@@ -121,4 +116,16 @@ h1{
 
 #submit{
   margin-top:5%;
+}
+
+#form{
+  background:rgba(0, 0, 0, 0.6);
+  padding:5%;
+  color:white;
+  text-align: center;
+  margin-bottom:10%;
+}
+
+#generator{
+  background:rgba(0, 0, 0, 0.6);
 }
