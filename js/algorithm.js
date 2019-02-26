@@ -89,6 +89,8 @@ function write_sigil(sigil_array){
   }
   console.log(sigil_array);
   ctx.stroke();
+  localStorage.setItem('sigil', JSON.stringify(sigil_array));
+  
 }
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
 //when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
@@ -147,6 +149,10 @@ form.addEventListener('submit',function (event){
 });
 
 
+// Saving sigils made into local storage
+
+// localStorage.setItem('sigil', JSON.stringify(sigil_array));
+// localStorage.getItem('sigil');
 //radio buttons
 var moods = document.getElementById('form');
 var mood_value;
