@@ -2,6 +2,7 @@
   --container-bg-color: #333;
   --left-bg-color: rgba(44, 9, 65, 0.8);
   --right-bg-color:rgba(196, 215, 224, 0.3);
+  --button-hover-color: rgba(84, 76, 172, 0.5);
   --hover-width: 100%;
   --other-width: 0%;
   --speed: 1000ms;
@@ -71,38 +72,23 @@ h1{
   transition:var(--speed) all ease-in-out;
 }
 
-.hover-left .left{
+.click-left .left{
   width:var(--hover-width);
 }
 
-.hover-left .right{
+.click-left .right{
   width:var(--other width);
 }
 
-/* .hover-left .right:before{
-  z-index:2;
-} */
-
-.hover-right .right{
+.click-right .right{
   width: var(--hover-width);
 }
 
-.hover-right .left{
+.click-right .left{
   width:var(--other-width);
 }
 
-/* .hover-right .left:before{
-  z-index:2;
-} */
-
-/* @media(max-width:800px){
-  h1{
-    font-size: 2rem;
-  }
-} */
-
 #generator-container{
-  /* background-color: white; */
   opacity:.8;
   position:absolute;
   top:3%;
@@ -111,21 +97,60 @@ h1{
 
 #mood{
   display:block;
-  margin-top:5%;
+  margin-top:2.5%;
 }
 
 #submit{
-  margin-top:5%;
+  margin-top:3%;
+  width:120px;
+  height:33px;
+  border-radius: 1px;
+  text-transform: uppercase;
+  background-color:rgba(245, 246, 253, 0.6)
+}
+
+#submit:hover{
+  background-color:var(--button-hover-color);
 }
 
 #form{
   background:rgba(0, 0, 0, 0.6);
-  padding:5%;
+  padding:3%;
   color:white;
   text-align: center;
-  margin-bottom:10%;
+  margin-bottom:5%;
 }
 
 #generator{
   background:rgba(0, 0, 0, 0.6);
 }
+
+#left-arrow{
+  width:40px;
+  position:absolute;
+  top:45%;
+  right:95%;
+}
+
+#right-arrow{
+  width:40px;
+  position:absolute;
+  top:45%;
+  left:95%;
+}
+
+#text-input{
+  margin-left:10px;
+  height:33px;
+  width:200px;
+  font-size: 20px;
+  background-color:transparent;
+  border: solid 2px white;
+  color:white;
+  outline:none
+}
+
+#input{
+  font-size: 20px;
+}
+
