@@ -1,15 +1,19 @@
 
 'use strict';
 
-
 //global vars
-
-var user_string =  event.target.submit.value;
-console.log(event.target.submit.value);
-//user_string = user input;
-var user_array = [];
+var button = document.getElementById('submit');
+console.log('submit', button);
+var form = document.getElementById('form');
+console.log('form', form);
+var radio = document.getElementsByClassName('color');
+console.log('radio', radio);
+// var user_array = [];
+// console.log('user_array', user_array);
 var sigil_array = [];
-
+console.log('sigil_array', sigil_array);
+var sigil_space = document.getElementById('generator');
+var ctx = sigil_space.getContext('2d');
 
 //helper functions
 
@@ -24,22 +28,25 @@ function random_number (max_num, min_num) {
 
 //remove duplicate letters and vowels, match individual letters up with library arrays and select shape at random
 
-function process_sigil(event) {
-  event.preventDefault();
+function process_sigil(user_string) {
   console.log('begining of process_sigil',user_string);
-  user_array = user_array.from(new Set(user_string.split('')));
+  var user_array = Array.from(new Set(user_string.split('').map(letter => letter.toLowerCase())));
   console.log('after newSet and array.from', user_array);
-  user_array.join('a','e','i','o','u');
+  var to_remove = ['a','e','i','o','u','.','!',',',' '];
+  user_array = user_array.filter(letter => !to_remove.includes(letter));
   console.log('after array.join', user_array);
   for (var i = 0; i < user_array.length; i++){
-    eval('library.${user_array[i]}');
-  //pull random_number shape from the library, store in array till ready to render,
+    eval(`library.${user_array[i]}`);
+
   }
+  return user_array;
 }
 
-function color_selection(event){
-  //this is the event handler for radio button submission
-}
+// function color_selection(event, user_mood){
+//   event.preventDefault();
+//   //this is the event handler for radio button submission
+
+// }
 
 //constructor(necessary? will we just have the one object?)
 var library ={
@@ -68,12 +75,13 @@ var library ={
 
 };
 
-function write_sigil(){
-  var sigil_space = document.getElementById('generator');
-  var ctx = sigil_space.getContext('2d');
+function write_sigil(sigil_array){
+
   for(var j=0; j < sigil_array.length; j++)
     ctx.beginPath();
-  ctx.sigil_array[random_number()];
+    //utilize libarary
+    console.log(random_number);
+  ctx.sigil_array[random_number(sigil_array.length, 0)];
   ctx.stroke();
 }
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
@@ -103,19 +111,30 @@ right.addEventListener('mouseleave',() => {
 });
 
 //submit button
-var submit = document.getElementById('submit');
 
-submit.addEventListener('event',process_sigil());
+form.addEventListener('submit',function (event){
+  event.preventDefault();
+  var user_string = document.getElementById('the_word').value;
+  console.log('user_string', user_string);
+
+  var user_array = process_sigil(user_string);
+
+  write_sigil(user_array);
+});
 
 
 //radio buttons
-var radio = document.getElementsByClassName('color');
 
-radio.addEventListener('event',color_selection());
+// radio.addEventListener('event', function (event){
+//   event.preventDefault();
+//   console.log(event.target.radio.value);
+//   // var user_mood = event.target.radio.value;
+//   console.log('user_mood', event.target.submit.value);
+// });
 
 //store rendered sigils to local storage
 //set user generated sigil and user_string into local storage
 
 //init
-write_sigil();
+
 
