@@ -3,9 +3,11 @@
 
 
 //global vars
-user_string = submit.textContent
-user_array = [];
-sigil_array = [];
+
+var user_string = submit.textContent
+var user_array = [];
+var sigil_array = [];
+
 
 //helper functions
 
@@ -31,27 +33,27 @@ for (i = 0; i < user_array.length; i++){
 //constructor(necessary? will we just have the one object?)
 var library ={
 
-  b: [],
-  c: [],
-  d: [],
-  f: [],
-  g: [],
-  h: [],
-  j: [],
-  k: [],
-  l: [],
-  m: [],
-  n: [],
-  p: [],
-  q: [],
-  r: [],
-  s: [],
-  t: [],
-  v: [],
-  w: [],
-  x: [],
-  y: [],
-  z: [],
+  b: [(150, 75, 25, 0, 2 * Math.PI),],
+  c: [(100, 50, 35, .60, 1 * Math.PI)],
+  d: [(150, 75, 25, 0, .5 * Math.PI)],
+  f: [(100, 50, 35, 0, 2 * Math.PI)],
+  g: [(50, 100, 35, .80, 1 * Math.PI)],
+  h: [(100, 50, 100, 0, .5 * Math.PI)],
+  j: [(200, 45, 50, 0, 2 * Math.PI)],
+  k: [(150, 70, 84, .5, 1 * Math.PI)],
+  l: [(75, 100, 40, 23, .5 * Math.PI)],
+  m: [(175, 50, 60, 0, 2 * Math.PI)],
+  n: [(100, 150, 80, 0, 1 * Math.PI)],
+  p: [(100, 50, 35, 55, .5 * Math.PI)],
+  q: [(50, 200, 80, 0, 2 * Math.PI)],
+  r: [(50, 35, 8, 23, 1 * Math.PI)],
+  s: [(25, 130, 70, 35, .5 * Math.PI)],
+  t: [(39, 100, 15, 0, 2 * Math.PI)],
+  v: [(150, 150, 40, .15, 1 * Math.PI)],
+  w: [(200, 75, 10, 86, .5 * Math.PI)],
+  x: [(100, 85, 95, 0, 2 * Math.PI)],
+  y: [(100, 100, 100, 0, 1 * Math.PI)],
+  z: [(8, 2, 100, 100, .5 * Math.PI)],
 
 };
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
