@@ -148,10 +148,10 @@ form.addEventListener('submit',function (event){
 
 //radio buttons
 var moods = document.getElementById('form');
+var mood_value;
 
 moods.addEventListener('submit',function(color_selection){
   color_selection.preventDefault();
-  var mood_value;
   if(document.getElementById('happy').checked){
     mood_value = document.getElementById('happy').value;
   }else if(document.getElementById('chill').checked){
@@ -164,11 +164,20 @@ moods.addEventListener('submit',function(color_selection){
   return(mood_value);
 });
 
+moods.addEventListener('submit',function(render_color_theme){
+  if(mood_value === 'happy'){
+    sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';
+  }else if(mood_value === 'chill'){
+    sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';
+  }else if(mood_value === 'chaotic'){
+    sigil_space.style.backgroundImage= 'url(/img/chaotic2.jpg)';
+  }else if(mood_value === 'sad'){
+    sigil_space.style.backgroundImage = 'url(/img/sad2.jpg)';
+  }
+});
 
 
 // store rendered sigils to local storage
 // set user generated sigil and user_string into local storage
 
 //init
-
-
