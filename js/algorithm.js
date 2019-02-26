@@ -173,7 +173,7 @@ function handle_mood(color_selection){
   return(mood_value);
 };
 
-function change_color(render_color_theme){ debugger; 
+function change_color(render_color_theme){
   if(mood_value === 'happy'){
     ctx.strokeStyle = '#f4cb42';
     sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';
