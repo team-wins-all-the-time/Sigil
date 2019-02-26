@@ -107,23 +107,40 @@ var left = document.querySelector('.left');
 var right = document.querySelector('.right');
 var container = document.querySelector('.container');
 
-left.addEventListener('mouseenter',() => {
-  container.classList.add('hover-left');
+var target_left_arrow = document.getElementById('left-arrow');
+var target_right_arrow = document.getElementById('right-arrow');
+
+left.addEventListener('click',() => {
+  target_right_arrow.src = ('/img/right.png');
+  container.classList.add('click-left');
 });
 
-left.addEventListener('mouseleave',() => {
-  container.classList.remove('hover-left');
+var split_screen_right = function(event){
+  if(event.target.id === 'right-arrow'){
+    container.classList.remove('click-left');
+    target_right_arrow.src = ('');
+  }
+}
+
+left.addEventListener('click',split_screen_right); 
+
+
+right.addEventListener('click',() => {
+  container.classList.add('click-right');
+  target_left_arrow.src = ('/img/left.png');
 });
 
-right.addEventListener('mouseenter',() => {
-  container.classList.add('hover-right');
-});
+var split_screen_left = function(event){
+  if(event.target.id === 'left-arrow'){
+  container.classList.remove('click-right');
+  target_left_arrow.src = ('');
+  }
+}
 
-right.addEventListener('mouseleave',() => {
-  container.classList.remove('hover-right');
-});
-
-//submit button
+right.addEventListener('click', split_screen_left);
+  
+  //submit button
+var submit = document.getElementById('submit');
 
 form.addEventListener('submit',function (event){
   event.preventDefault();
