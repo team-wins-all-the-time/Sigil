@@ -29,13 +29,13 @@ function random_number (max_num, min_num) {
 //remove duplicate letters and vowels, match individual letters up with library arrays and select shape at random
 
 function process_sigil(user_string) {
-  console.log('begining of process_sigil',user_string);
+  // console.log('begining of process_sigil',user_string);
   var user_array = Array.from(new Set(user_string.split('').map(letter => letter.toLowerCase())));
-  console.log('after newSet and array.from', user_array);
+  // console.log('after newSet and array.from', user_array);
   var to_remove = ['a','e','i','o','u','.','!',',',' '];
   user_array = user_array.filter(letter => !to_remove.includes(letter));
-  console.log('after array.join', user_array);
-  var sigil_array = []
+  // console.log('after array.join', user_array);
+  var sigil_array = [];
   for (var i = 0; i < user_array.length; i++){
     // console.log(ctx.arc(150, 75, 25, 0, 2 * Math.PI));
     var thing = eval(`library.${user_array[i]}`);
@@ -84,19 +84,24 @@ var library ={
 };
 
 function write_sigil(sigil_array){
-  console.log(sigil_array);
-  for (l = 0; l < sigil_array.length; l ++){
-    if thing[1] == 'rect':
-    ctx.rect(thing[0])
-    else if thing [1] == 'arc':
-    ctx.arc([150, 150, 40, .15, 1] * Math.PI)
+  ctx.beginPath();
+  for (var l = 0; l < sigil_array.length; l ++){
+
+    if (sigil_array[l][1] === 'rect'){
+      ctx.rect(sigil_array[l][0][0], sigil_array[l][0][1], sigil_array[l][0][2], sigil_array[l][0][3]);
+    }
+    else if (sigil_array[l][1] === 'arc'){
+      ctx.arc(sigil_array[l][0][0], sigil_array[l][0][1], sigil_array[l][0][2], sigil_array[l][0][3], sigil_array[l][0][4] * Math.PI);
+    }
   // for(var j=0; j < sigil_array.length; j++)
   //   ctx.beginPath();
   //   //utilize libarary
   //   console.log(random_number);
   // ctx.sigil_array[random_number(sigil_array.length, 0)];
   // ctx.stroke();
-}
+  }
+  console.log(sigil_array)
+  ctx.stroke();
 }
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
 //when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
