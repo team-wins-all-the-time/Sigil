@@ -77,6 +77,8 @@ var library ={
 
 function write_sigil(sigil_array){
   ctx.clearRect(0,0,400,500);
+  // var mood_color = moods.mood_value.strokeStyle;
+  // ctx.strokeStyle = mood_color;
   ctx.beginPath();
   for (var l = 0; l < sigil_array.length; l ++){
     console.log(sigil_array);
@@ -136,7 +138,7 @@ right.addEventListener('click', split_screen_left);
 
 var submit = document.getElementById('submit');
 
-form.addEventListener('submit',function (event){
+function render_sigil(event){
   event.preventDefault();
   var user_string = document.getElementById('text-input').value;
   console.log('user_string', user_string);
@@ -146,7 +148,7 @@ form.addEventListener('submit',function (event){
   console.log(sigil_array);
   write_sigil(sigil_array);
 
-});
+}; 
 
 
 // Saving sigils made into local storage
@@ -157,7 +159,7 @@ form.addEventListener('submit',function (event){
 var moods = document.getElementById('form');
 var mood_value;
 
-moods.addEventListener('submit',function(color_selection){
+function handle_mood(color_selection){
   color_selection.preventDefault();
   if(document.getElementById('happy').checked){
     mood_value = document.getElementById('happy').value;
@@ -169,21 +171,34 @@ moods.addEventListener('submit',function(color_selection){
     mood_value = document.getElementById('sad').value;
   }
   return(mood_value);
-});
+};
 
-moods.addEventListener('submit',function(render_color_theme){
+function change_color(render_color_theme){ debugger; 
   if(mood_value === 'happy'){
+    ctx.strokeStyle = '#f4cb42';
     sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';
+    
   }else if(mood_value === 'chill'){
+    ctx.strokeStyle = '#185096';
     sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';
+    
   }else if(mood_value === 'chaotic'){
-    sigil_space.style.backgroundImage= 'url(/img/chaotic2.jpg)';
+    ctx.strokeStyle = '#eae8ef';
+    sigil_space.style.backgroundImage = 'url(/img/chaotic2.jpg)';
+    
   }else if(mood_value === 'sad'){
+    ctx.strokeStyle = '#0a6077';
     sigil_space.style.backgroundImage = 'url(/img/sad2.jpg)';
+   
   }
+}
+
+moods.addEventListener('submit', function(event){
+  handle_mood(event);
+  change_color(event);
+  render_sigil(event);
+  
 });
-
-
 // store rendered sigils to local storage
 // set user generated sigil and user_string into local storage
 
