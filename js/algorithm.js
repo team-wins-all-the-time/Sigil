@@ -55,11 +55,11 @@ function process_sigil(user_string) {
 
 //constructor(necessary? will we just have the one object?)
 var library ={
+  // b: [[[150, 75, 25, 0, 2], 'arc'], [[150, 75, 100, 0], 'rect']],
+  c: [[[150, 75, 25, 0, 2], 'arc'], [[150, 75, 100, 0], 'rect']],
+
+
   b: [[[150, 75, 25, 0, 2], 'arc'], [[150, 75, 100, 0], 'rect']],
-  c: [[[150, 75, 25, 0, 2], 'arc'], [[150, 75, 100, 0], 'rect']]
-
-
-  // b: [ctx.arc(150, 75, 25, 0, 2 * Math.PI), ctx.rect(150, 75, 100, 0)],
   // c: [ctx.arc(100, 50, 35, .60, 1 * Math.PI), ctx.rect(150, 75, 25, 50)],
   // d: [ctx.arc(150, 75, 25, 0, .5 * Math.PI), ctx.rect(100, 150, 97, 80)],
   // f: [ctx.arc(100, 50, 35, 0, 2 * Math.PI), ctx.rect(85, 20, 150, 150)],
@@ -93,14 +93,8 @@ function write_sigil(sigil_array){
     else if (sigil_array[l][1] === 'arc'){
       ctx.arc(sigil_array[l][0][0], sigil_array[l][0][1], sigil_array[l][0][2], sigil_array[l][0][3], sigil_array[l][0][4] * Math.PI);
     }
-  // for(var j=0; j < sigil_array.length; j++)
-  //   ctx.beginPath();
-  //   //utilize libarary
-  //   console.log(random_number);
-  // ctx.sigil_array[random_number(sigil_array.length, 0)];
-  // ctx.stroke();
   }
-  console.log(sigil_array)
+  console.log(sigil_array);
   ctx.stroke();
 }
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
