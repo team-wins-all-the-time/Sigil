@@ -22,7 +22,7 @@ var ctx = sigil_space.getContext('2d');
 function random_number (max_num, min_num) {
   var max = Math.ceil(max_num);
   var min = Math.floor(min_num);
-  var num = Math.floor(Math.random()*(max-min+1))+min;
+  var num = Math.round(Math.random()*(max-min))+min;
   return num;
 }
 
@@ -35,11 +35,16 @@ function process_sigil(user_string) {
   var to_remove = ['a','e','i','o','u','.','!',',',' '];
   user_array = user_array.filter(letter => !to_remove.includes(letter));
   console.log('after array.join', user_array);
+  var sigil_array = []
   for (var i = 0; i < user_array.length; i++){
-    eval(`library.${user_array[i]}`);
+    // console.log(ctx.arc(150, 75, 25, 0, 2 * Math.PI));
+    var thing = eval(`library.${user_array[i]}`);
+    // console.log(user_array[i]);
+    sigil_array.push(thing[random_number(1,0)]);
+    // console.log(random_number(1,0));
 
   }
-  return user_array;
+  return sigil_array;
 }
 
 // function color_selection(event, user_mood){
@@ -50,39 +55,48 @@ function process_sigil(user_string) {
 
 //constructor(necessary? will we just have the one object?)
 var library ={
+  b: [[[150, 75, 25, 0, 2], 'arc'], [[150, 75, 100, 0], 'rect']],
+  c: [[[150, 75, 25, 0, 2], 'arc'], [[150, 75, 100, 0], 'rect']]
 
-  b: [ctx.arc(150, 75, 25, 0, 2 * Math.PI), ctx.rect(150, 75, 100, 0)],
-  c: [ctx.arc(100, 50, 35, .60, 1 * Math.PI), ctx.rect(150, 75, 25, 50)],
-  d: [ctx.arc(150, 75, 25, 0, .5 * Math.PI), ctx.rect(100, 150, 97, 80)],
-  f: [ctx.arc(100, 50, 35, 0, 2 * Math.PI), ctx.rect(85, 20, 150, 150)],
-  g: [ctx.arc(50, 100, 35, .80, 1 * Math.PI), ctx.rect(30, 100, 42, 77)],
-  h: [ctx.arc(100, 50, 100, 0, .5 * Math.PI),ctx.rect(70, 20, 60, 27)],
-  j: [ctx.arc(200, 45, 50, 0, 2 * Math.PI), ctx.rect(15, 101, 150, 13)],
-  k: [ctx.arc(150, 70, 84, .5, 1 * Math.PI), ctx.rect(69, 6, 20, 2)],
-  l: [ctx.arc(75, 100, 40, 23, .5 * Math.PI), ctx.rect(12, 59, 4, 31)],
-  m: [ctx.arc(175, 50, 60, 0, 2 * Math.PI), ctx.rect(37, 57, 69, 41)],
-  n: [ctx.arc(100, 150, 80, 0, 1 * Math.PI), ctx.rect(65, 1, 32, 129)],
-  p: [ctx.arc(100, 50, 35, 55, .5 * Math.PI), ctx.rect(67, 59, 142, 64)],
-  q: [ctx.arc(50, 200, 80, 0, 2 * Math.PI), ctx.rect(70, 104, 89, 120)],
-  r: [ctx.arc(50, 35, 8, 23, 1 * Math.PI), ctx.rect(123, 135, 132, 19)],
-  s: [ctx.arc(25, 130, 70, 35, .5 * Math.PI), ctx.rect(19, 113, 129, 54)],
-  t: [ctx.arc(39, 100, 15, 0, 2 * Math.PI), ctx.rect(115, 89, 47, 139)],
-  v: [ctx.arc(150, 150, 40, .15, 1 * Math.PI), ctx.rect(49, 93, 124, 147)],
-  w: [ctx.arc(200, 75, 10, 86, .5 * Math.PI), ctx.rect(122, 69, 38, 3)],
-  x: [ctx.arc(100, 85, 95, 0, 2 * Math.PI), ctx.rect(72, 32, 53, 16)],
-  y: [ctx.arc(100, 100, 100, 0, 1 * Math.PI), ctx.rect(66, 86, 91, 11)],
-  z: [ctx.arc(8, 2, 100, 100, .5 * Math.PI), ctx.rect(48, 140, 75, 128)],
+
+  // b: [ctx.arc(150, 75, 25, 0, 2 * Math.PI), ctx.rect(150, 75, 100, 0)],
+  // c: [ctx.arc(100, 50, 35, .60, 1 * Math.PI), ctx.rect(150, 75, 25, 50)],
+  // d: [ctx.arc(150, 75, 25, 0, .5 * Math.PI), ctx.rect(100, 150, 97, 80)],
+  // f: [ctx.arc(100, 50, 35, 0, 2 * Math.PI), ctx.rect(85, 20, 150, 150)],
+  // g: [ctx.arc(50, 100, 35, .80, 1 * Math.PI), ctx.rect(30, 100, 42, 77)],
+  // h: [ctx.arc(100, 50, 100, 0, .5 * Math.PI),ctx.rect(70, 20, 60, 27)],
+  // j: [ctx.arc(200, 45, 50, 0, 2 * Math.PI), ctx.rect(15, 101, 150, 13)],
+  // k: [ctx.arc(150, 70, 84, .5, 1 * Math.PI), ctx.rect(69, 6, 20, 2)],
+  // l: [ctx.arc(75, 100, 40, 23, .5 * Math.PI), ctx.rect(12, 59, 4, 31)],
+  // m: [ctx.arc(175, 50, 60, 0, 2 * Math.PI), ctx.rect(37, 57, 69, 41)],
+  // n: [ctx.arc(100, 150, 80, 0, 1 * Math.PI), ctx.rect(65, 1, 32, 129)],
+  // p: [ctx.arc(100, 50, 35, 55, .5 * Math.PI), ctx.rect(67, 59, 142, 64)],
+  // q: [ctx.arc(50, 200, 80, 0, 2 * Math.PI), ctx.rect(70, 104, 89, 120)],
+  // r: [ctx.arc(50, 35, 8, 23, 1 * Math.PI), ctx.rect(123, 135, 132, 19)],
+  // s: [ctx.arc(25, 130, 70, 35, .5 * Math.PI), ctx.rect(19, 113, 129, 54)],
+  // t: [ctx.arc(39, 100, 15, 0, 2 * Math.PI), ctx.rect(115, 89, 47, 139)],
+  // v: [ctx.arc(150, 150, 40, .15, 1 * Math.PI), ctx.rect(49, 93, 124, 147)],
+  // w: [ctx.arc(200, 75, 10, 86, .5 * Math.PI), ctx.rect(122, 69, 38, 3)],
+  // x: [ctx.arc(100, 85, 95, 0, 2 * Math.PI), ctx.rect(72, 32, 53, 16)],
+  // y: [ctx.arc(100, 100, 100, 0, 1 * Math.PI), ctx.rect(66, 86, 91, 11)],
+  // z: [ctx.arc(8, 2, 100, 100, .5 * Math.PI), ctx.rect(48, 140, 75, 128)],
 
 };
 
 function write_sigil(sigil_array){
-
-  for(var j=0; j < sigil_array.length; j++)
-    ctx.beginPath();
-    //utilize libarary
-    console.log(random_number);
-  ctx.sigil_array[random_number(sigil_array.length, 0)];
-  ctx.stroke();
+  console.log(sigil_array);
+  for (l = 0; l < sigil_array.length; l ++){
+    if thing[1] == 'rect':
+    ctx.rect(thing[0])
+    else if thing [1] == 'arc':
+    ctx.arc([150, 150, 40, .15, 1] * Math.PI)
+  // for(var j=0; j < sigil_array.length; j++)
+  //   ctx.beginPath();
+  //   //utilize libarary
+  //   console.log(random_number);
+  // ctx.sigil_array[random_number(sigil_array.length, 0)];
+  // ctx.stroke();
+}
 }
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
 //when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
@@ -117,9 +131,9 @@ form.addEventListener('submit',function (event){
   var user_string = document.getElementById('the_word').value;
   console.log('user_string', user_string);
 
-  var user_array = process_sigil(user_string);
+  var sigil_array = process_sigil(user_string);
 
-  write_sigil(user_array);
+  write_sigil(sigil_array);
 });
 
 
