@@ -3,9 +3,11 @@
 
 
 //global vars
-//user_string = user input;
+
+var user_string = submit.textContent
 var user_array = [];
 var sigil_array = [];
+
 
 //helper functions
 
