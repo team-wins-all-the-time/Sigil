@@ -3,12 +3,9 @@
 
 
 //global vars
-<<<<<<< HEAD
 var user_string =  event.target.submit.value;
 console.log(event.target.submit.value);
-=======
 //user_string = user input;
->>>>>>> 651bf0e899d4cae23ac4ee8218adf9cce91ae514
 var user_array = [];
 var sigil_array = [];
 
@@ -20,6 +17,7 @@ function random_number (max_num, min_num) {
   var max = Math.ceil(max_num);
   var min = Math.floor(min_num);
   var num = Math.floor(Math.random()*(max-min+1))+min;
+  return num;
 }
 
 //remove duplicate letters and vowels, match individual letters up with library arrays and select shape at random
@@ -27,18 +25,18 @@ function random_number (max_num, min_num) {
 function process_sigil(event) {
   event.preventDefault();
   console.log('begining of process_sigil',user_string);
-user_array = user_array.from(newSet(user_string.split('')));
-console.log('after newSet and array.from', user_array);
-user_array.join(a,e,i,o,u);
-console.log('after array.join', user_array);
-for (i = 0; i < user_array.length; i++){
-  eval('library.${user_array[i]}');
-  //pull random_number shape from the library, store in array till ready to render, 
+  user_array = user_array.from(new Set(user_string.split('')));
+  console.log('after newSet and array.from', user_array);
+  user_array.join('a','e','i','o','u');
+  console.log('after array.join', user_array);
+  for (var i = 0; i < user_array.length; i++){
+    eval('library.${user_array[i]}');
+  //pull random_number shape from the library, store in array till ready to render,
+  }
 }
-};
 
 function color_selection(event){
-  //this is the event handler for radio button submission 
+  //this is the event handler for radio button submission
 }
 
 //constructor(necessary? will we just have the one object?)
@@ -56,7 +54,7 @@ var library ={
   m: [(175, 50, 60, 0, 2 * Math.PI)],
   n: [(100, 150, 80, 0, 1 * Math.PI)],
   p: [(100, 50, 35, 55, .5 * Math.PI)],
-  q: [50, 200, 80, 0, 2 * Math.PI)],
+  q: [(50, 200, 80, 0, 2 * Math.PI)],
   r: [(50, 35, 8, 23, 1 * Math.PI)],
   s: [(25, 130, 70, 35, .5 * Math.PI)],
   t: [(39, 100, 15, 0, 2 * Math.PI)],
@@ -68,11 +66,13 @@ var library ={
 
 };
 
-var sigil_space = document.getElementById('generator');
-var ctx = sigil_space.getContext('2d');
-
 function write_sigil(){
-  for(j=0; j < sigil_array.length)
+  var sigil_space = document.getElementById('generator');
+  var ctx = sigil_space.getContext('2d');
+  for(var j=0; j < sigil_array.length; j++)
+    ctx.beginPath();
+  ctx.sigil_array[random_number()];
+  ctx.stroke();
 }
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
 //when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
@@ -115,4 +115,5 @@ radio.addEventListener('event',color_selection());
 //set user generated sigil and user_string into local storage
 
 //init
+write_sigil();
 
