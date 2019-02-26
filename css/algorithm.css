@@ -154,4 +154,14 @@ h1{
 #input{
   font-size: 20px;
 }
+#save{
+  display:block;
+  margin:auto;
+  margin-top:3%;
+  width:120px;
+  height:33px;
+  border-radius: 1px;
+  text-transform: uppercase;
+  background-color:rgba(245, 246, 253, 0.6)
+}
 
