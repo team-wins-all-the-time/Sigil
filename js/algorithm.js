@@ -144,7 +144,7 @@ var submit = document.getElementById('submit');
 
 form.addEventListener('submit',function (event){
   event.preventDefault();
-  var user_string = document.getElementById('the_word').value;
+  var user_string = document.getElementById('text-input').value;
   console.log('user_string', user_string);
 
   var sigil_array = process_sigil(user_string);
