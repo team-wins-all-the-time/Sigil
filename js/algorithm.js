@@ -76,6 +76,7 @@ var library ={
 };
 
 function write_sigil(sigil_array){
+  ctx.clearRect(0,0,400,500);
   ctx.beginPath();
   for (var l = 0; l < sigil_array.length; l ++){
     console.log(sigil_array);
