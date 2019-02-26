@@ -47,11 +47,6 @@ function process_sigil(user_string) {
   return sigil_array;
 }
 
-// function color_selection(event, user_mood){
-//   event.preventDefault();
-//   //this is the event handler for radio button submission
-
-// }
 
 //constructor(necessary? will we just have the one object?)
 var library ={
@@ -120,9 +115,9 @@ var split_screen_right = function(event){
     container.classList.remove('click-left');
     target_right_arrow.src = ('');
   }
-}
+};
 
-left.addEventListener('click',split_screen_right); 
+left.addEventListener('click',split_screen_right);
 
 
 right.addEventListener('click',() => {
@@ -132,15 +127,15 @@ right.addEventListener('click',() => {
 
 var split_screen_left = function(event){
   if(event.target.id === 'left-arrow'){
-  container.classList.remove('click-right');
-  target_left_arrow.src = ('');
+    container.classList.remove('click-right');
+    target_left_arrow.src = ('');
   }
-}
+};
 
 right.addEventListener('click', split_screen_left);
-  
-  //submit button
-var submit = document.getElementById('submit');
+
+//submit button
+// var submit = document.getElementById('submit');
 
 form.addEventListener('submit',function (event){
   event.preventDefault();
@@ -154,16 +149,27 @@ form.addEventListener('submit',function (event){
 
 
 //radio buttons
+var moods = document.getElementById('form');
 
-// radio.addEventListener('event', function (event){
-//   event.preventDefault();
-//   console.log(event.target.radio.value);
-//   // var user_mood = event.target.radio.value;
-//   console.log('user_mood', event.target.submit.value);
-// });
+moods.addEventListener('submit',function(color_selection){
+  color_selection.preventDefault();
+  var mood_value;
+  if(document.getElementById('happy').checked){
+    mood_value = document.getElementById('happy').value;
+  }else if(document.getElementById('chill').checked){
+    mood_value = document.getElementById('chill').value;
+  }else if(document.getElementById('chaotic').checked){
+    mood_value = document.getElementById('chaotic').value;
+  }else if(document.getElementById('sad').checked){
+    mood_value = document.getElementById('sad').value;
+  }
+  return(mood_value);
+});
 
-//store rendered sigils to local storage
-//set user generated sigil and user_string into local storage
+
+
+// store rendered sigils to local storage
+// set user generated sigil and user_string into local storage
 
 //init
 
