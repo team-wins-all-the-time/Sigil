@@ -38,7 +38,7 @@ function process_sigil(user_string) {
   var sigil_array = [];
   for (var i = 0; i < user_array.length; i++){
     // var thing = eval(`library.${user_array[i]}`);
-  var thing = library[user_array[i]];
+    var thing = library[user_array[i]];
     console.log(user_array[i]);
     sigil_array.push(thing[random_number(1,0)]);
     console.log(random_number(1,0));
@@ -117,9 +117,9 @@ var split_screen_right = function(event){
     container.classList.remove('click-left');
     target_right_arrow.src = ('');
   }
-}
+};
 
-left.addEventListener('click',split_screen_right); 
+left.addEventListener('click',split_screen_right);
 
 
 right.addEventListener('click',() => {
@@ -129,14 +129,15 @@ right.addEventListener('click',() => {
 
 var split_screen_left = function(event){
   if(event.target.id === 'left-arrow'){
-  container.classList.remove('click-right');
-  target_left_arrow.src = ('');
+    container.classList.remove('click-right');
+    target_left_arrow.src = ('');
   }
-}
+};
 
 right.addEventListener('click', split_screen_left);
+// eslint-disable-next-line no-trailing-spaces
   
-  //submit button
+//submit button
 var submit = document.getElementById('submit');
 
 form.addEventListener('submit',function (event){
@@ -148,7 +149,7 @@ form.addEventListener('submit',function (event){
 
   console.log(sigil_array);
   write_sigil(sigil_array);
-  
+
 });
 
 
