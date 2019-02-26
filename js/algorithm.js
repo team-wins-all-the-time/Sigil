@@ -92,6 +92,13 @@ function write_sigil(sigil_array){
   localStorage.setItem('sigil', JSON.stringify(sigil_array));
   
 }
+var save_button = document.getElementById('save');
+save_button.addEventListener('click', function(){
+ var test = sigil_space.toDataURL();
+ localStorage.setItem('pic', JSON.stringify(test))
+  console.log(test);
+}
+);
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
 //when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
 
