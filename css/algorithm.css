@@ -29,8 +29,7 @@ h1{
 .container{
   position:relative;
   width:100%;
-  height:100%;
-  background:var(--container-bg-color);
+  height:800px;
 }
 
 .split{
@@ -106,7 +105,8 @@ h1{
   height:33px;
   border-radius: 1px;
   text-transform: uppercase;
-  background-color:rgba(245, 246, 253, 0.6)
+  background-color:rgba(245, 246, 253, 0.6);
+  text-decoration: none;
 }
 
 #submit:hover{
@@ -162,6 +162,32 @@ h1{
   height:33px;
   border-radius: 1px;
   text-transform: uppercase;
-  background-color:rgba(245, 246, 253, 0.6)
+  background-color:rgba(245, 246, 253, 0.6);
+}
+nav{
+  position: absolute;
+  padding:1%;
+  left:85%;
+  margin-top:1%;
+  overflow: hidden;
 }
 
+nav>ul>li{
+  display:inline;
+  padding:7%;
+  margin-right:3%;
+  background-color:rgba(245, 246, 253, 0.6);
+}
+
+nav>ul>li>a{
+  text-decoration: none;
+  color:black;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size:12px;
+}
+
+nav>ul{
+
+}

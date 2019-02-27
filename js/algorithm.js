@@ -92,12 +92,15 @@ function write_sigil(sigil_array){
   console.log(sigil_array);
   ctx.stroke();
 }
+//Store text input into local storage
+var save_button = document.getElementById('save');
+var text_array = [];
+
 
 //Store images into local storage
 var img_array = [];
-var save_button = document.getElementById('save');
 
-save_button.addEventListener('click',function(event){
+var local_storage = function(event){
   event.preventDefault();
 
   var new_img = sigil_space.toDataURL(); //transform canvas image into img URL
@@ -111,7 +114,9 @@ save_button.addEventListener('click',function(event){
 
   stringy_img_array = JSON.stringify(img_array); //stringify and store img_array into local storage
   localStorage.setItem('pic', stringy_img_array);
-});
+};
+
+save_button.addEventListener('click', local_storage);
 
 //object instantnation(necessary?)
 
@@ -164,13 +169,8 @@ function render_sigil(event){
   console.log(sigil_array);
   write_sigil(sigil_array);
 
-} 
+}
 
-
-// Saving sigils made into local storage
-
-// localStorage.setItem('sigil', JSON.stringify(sigil_array));
-// localStorage.getItem('sigil');
 //radio buttons
 var moods = document.getElementById('form');
 var mood_value;
