@@ -93,23 +93,25 @@ function write_sigil(sigil_array){
   ctx.stroke();
 }
 
-var test = [];
+//Store images into local storage
+var img_array = [];
 var save_button = document.getElementById('save');
-save_button.addEventListener('click', function(event){
-  event.preventDefault();
-  var new_img = sigil_space.toDataURL();
-  test.push(new_img);
-  console.log(test);
-  if(localStorage.getItem('pic')){
-    console.log(test);
-    test.push(JSON.parse(localStorage.getItem('pic')));
-    console.log(test);
-  }
-  localStorage.setItem('pic', JSON.stringify(test));
-});
 
-//, select a random set of coordinates from the array and push taht to the array of "to be rendered"
-//when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
+save_button.addEventListener('click',function(event){
+  event.preventDefault();
+
+  var new_img = sigil_space.toDataURL(); //transform canvas image into img URL
+
+  if (localStorage.getItem('pic')){ //if local storage exists, add parse img URLs and add them to array.
+    var stringy_img_array = localStorage.getItem('pic');
+    img_array=JSON.parse(stringy_img_array);}
+
+  img_array.push(new_img); //add new img to array
+  console.log(img_array);
+
+  stringy_img_array = JSON.stringify(img_array); //stringify and store img_array into local storage
+  localStorage.setItem('pic', stringy_img_array);
+});
 
 //object instantnation(necessary?)
 
@@ -162,7 +164,7 @@ function render_sigil(event){
   console.log(sigil_array);
   write_sigil(sigil_array);
 
-}; 
+} 
 
 
 // Saving sigils made into local storage
@@ -185,25 +187,21 @@ function handle_mood(color_selection){
     mood_value = document.getElementById('sad').value;
   }
   return(mood_value);
-};
+}
 
 function change_color(render_color_theme){
   if(mood_value === 'happy'){
     ctx.strokeStyle = '#f4cb42';
-    sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';
-    
+    sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';  
   }else if(mood_value === 'chill'){
     ctx.strokeStyle = '#185096';
-    sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';
-    
+    sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';  
   }else if(mood_value === 'chaotic'){
     ctx.strokeStyle = '#eae8ef';
     sigil_space.style.backgroundImage = 'url(/img/chaotic3.jpg)';
-    
   }else if(mood_value === 'sad'){
     ctx.strokeStyle = '#0a6077';
     sigil_space.style.backgroundImage = 'url(/img/sad3.jpg)';
-   
   }
 }
 
@@ -211,7 +209,6 @@ moods.addEventListener('submit', function(event){
   handle_mood(event);
   change_color(event);
   render_sigil(event);
-  
 });
 // store rendered sigils to local storage
 // set user generated sigil and user_string into local storage

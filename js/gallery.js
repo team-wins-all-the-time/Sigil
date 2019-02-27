@@ -7,13 +7,13 @@
 // var ctx = sigil_space.getContext('2d');
 
 var retrieve = localStorage.getItem('pic');
-var sigil_array = JSON.parse(retrieve);
+var img_array = JSON.parse(retrieve);
 
-var target = document.getElementsByClassName('scrollmenu');
-for(var i =0; i < sigil_array.length; i++){
-  console.log(sigil_array);
+var target = document.getElementById('scrollmenu');
+for(var i =0; i < img_array.length; i++){
+  console.log(img_array);
   var img_el = document.createElement('IMG');
-  img_el.src = sigil_array[i];
+  img_el.src = img_array[i];
   target.appendChild(img_el);
 }
 
