@@ -2,6 +2,7 @@
     background-color: white;
     overflow: scroll;
     white-space: nowrap;
+    
 }
 
 div#scrollmenu a {
@@ -16,6 +17,11 @@ div#scrollmenu a:hover {
     background-color: #777;
 } 
 
+div#title {
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+}
 /* #aboutus { */
      /* width: 150px; */
     /* height: 150px; */
@@ -39,8 +45,10 @@ div#scrollmenu a:hover {
 h1 {
     text-align: center;
     margin: auto;
-    font-size: 1000px;
+    font-size: 40px;
+    /* background-color: blue; */
 }
+
 
 ul > li {
     text-align: center;
