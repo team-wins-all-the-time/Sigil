@@ -12,10 +12,11 @@ console.log(sigil_array);
 var render_pic = document.getElementById('test')
 render_pic.src = sigil_array;
 
-var img_el = document.createElement('img');
-var all_pic = [];
-all_pic.push(sigil_array);
-render_pic.src = all_pic;
+// Bonnie is awesome
+// var img_el = document.createElement('img');
+// var all_pic = [];
+// all_pic.push(sigil_array);
+// render_pic.src = all_pic;
 // function write_sigil(sigil_array){
 //     ctx.beginPath();
 //     for (var l = 0; l < sigil_array.length; l ++){
