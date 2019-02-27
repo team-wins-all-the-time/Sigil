@@ -91,9 +91,23 @@ function write_sigil(sigil_array){
   }
   console.log(sigil_array);
   ctx.stroke();
-  localStorage.setItem('sigil', JSON.stringify(sigil_array));
-  
 }
+
+var test = [];
+var save_button = document.getElementById('save');
+save_button.addEventListener('click', function(event){
+  event.preventDefault();
+  var new_img = sigil_space.toDataURL();
+  test.push(new_img);
+  console.log(test);
+  if(localStorage.getItem('pic')){
+    console.log(test);
+    test.push(JSON.parse(localStorage.getItem('pic')));
+    console.log(test);
+  }
+  localStorage.setItem('pic', JSON.stringify(test));
+});
+
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
 //when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
 
@@ -184,11 +198,11 @@ function change_color(render_color_theme){
     
   }else if(mood_value === 'chaotic'){
     ctx.strokeStyle = '#eae8ef';
-    sigil_space.style.backgroundImage = 'url(/img/chaotic2.jpg)';
+    sigil_space.style.backgroundImage = 'url(/img/chaotic3.jpg)';
     
   }else if(mood_value === 'sad'){
     ctx.strokeStyle = '#0a6077';
-    sigil_space.style.backgroundImage = 'url(/img/sad2.jpg)';
+    sigil_space.style.backgroundImage = 'url(/img/sad3.jpg)';
    
   }
 }
