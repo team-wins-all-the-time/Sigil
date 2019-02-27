@@ -194,11 +194,11 @@ function change_color(render_color_theme){
     
   }else if(mood_value === 'chaotic'){
     ctx.strokeStyle = '#eae8ef';
-    sigil_space.style.backgroundImage = 'url(/img/chaotic2.jpg)';
+    sigil_space.style.backgroundImage = 'url(/img/chaotic3.jpg)';
     
   }else if(mood_value === 'sad'){
     ctx.strokeStyle = '#0a6077';
-    sigil_space.style.backgroundImage = 'url(/img/sad2.jpg)';
+    sigil_space.style.backgroundImage = 'url(/img/sad3.jpg)';
    
   }
 }
