@@ -91,16 +91,19 @@ function write_sigil(sigil_array){
   }
   console.log(sigil_array);
   ctx.stroke();
-  localStorage.setItem('sigil', JSON.stringify(sigil_array));
-  
 }
+
+var test = [];
 var save_button = document.getElementById('save');
 save_button.addEventListener('click', function(){
- var test = sigil_space.toDataURL();
+ var new_img =sigil_space.toDataURL();
+ test.push(new_img);
+//  console.log(test);
  localStorage.setItem('pic', JSON.stringify(test))
-  console.log(test);
+
 }
 );
+
 //, select a random set of coordinates from the array and push taht to the array of "to be rendered"
 //when we have run through the entire array, select random starting coordinates for each shape, and render them to the canvas, uing any colors user has selected via radio buttons.
 
@@ -180,7 +183,7 @@ function handle_mood(color_selection){
   return(mood_value);
 };
 
-function change_color(render_color_theme){ debugger; 
+function change_color(render_color_theme){
   if(mood_value === 'happy'){
     ctx.strokeStyle = '#f4cb42';
     sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';
