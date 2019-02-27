@@ -1,4 +1,4 @@
- /* div#scrollmenu {
+  div#scrollmenu {
     background-color: white;
     overflow: scroll;
     white-space: nowrap;
@@ -14,24 +14,36 @@ div#scrollmenu a {
 
 div#scrollmenu a:hover {
     background-color: #777;
-} */
+} 
 
-#aboutus {
-     width: 150px;
-    height: 150px;
-     margin: 0, auto;
-    max-width: 100%;
+/* #aboutus { */
+     /* width: 150px; */
+    /* height: 150px; */
+     /* margin: 0, auto; */
+    /* max-width: 100%; */
     /* overflow: hidden; */
     /* float: left; */
-}
+/* } */
 
-img { 
+/* img { 
      width: 300px; 
     height: 300px; 
     /* display: inline-block; */
-    vertical-align: text-bottom;
-}
+    /* vertical-align: text-bottom; */
+/* } */ 
 
 #maintext {
     margin-bottom: 0%;
-} 
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 1000px;
+}
+
+ul > li {
+    text-align: center;
+    display: inline-block;
+    margin: 70px;
+}
