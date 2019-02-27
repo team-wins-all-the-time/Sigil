@@ -12,6 +12,7 @@ console.log(sigil_array);
 var render_pic = document.getElementById('test')
 render_pic.src = sigil_array;
 
+// Bonnie is awesome
 // var img_el = document.createElement('img');
 // var all_pic = [];
 // all_pic.push(sigil_array);
