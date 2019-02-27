@@ -216,7 +216,7 @@ function change_color(render_color_theme){
   if(mood_value === 'happy'){
     ctx.strokeStyle = '#f4cb42';
 
-    sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';
+    sigil_space.style.backgroundImage = 'url(/img/newhappy.jpg)';
 
   }else if(mood_value === 'chill'){
     ctx.strokeStyle = '#185096';
