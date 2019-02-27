@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    /* background-color: blue; */
+}
+
+
+ul > li {
+    text-align: center;
+    display: inline-block;
+    margin: 70px;
+}
+
+#maintext {
+    margin-bottom: 0%;
+}

@@ -10,6 +10,7 @@ var sigil_space = document.getElementById('generator');
 var ctx = sigil_space.getContext('2d');
 var user_string;
 
+
 //helper functions
 
 //random_number: pulled from a previous project of Merry's.
@@ -105,12 +106,11 @@ function write_sigil(sigil_array){
 //Store text input into local storage
 var save_button = document.getElementById('save');
 var text_array = [];
-
-
-//Store images into local storage
 var img_array = [];
 
+
 var local_storage = function(event){
+
   event.preventDefault();
 
   var new_img = sigil_space.toDataURL(); //transform canvas image into img URL
@@ -119,14 +119,23 @@ var local_storage = function(event){
     var stringy_img_array = localStorage.getItem('pic');
     img_array=JSON.parse(stringy_img_array);}
 
+  if(localStorage.getItem('text')){
+    var stringy_text_array = localStorage.getItem('text');
+    text_array = JSON.parse(stringy_text_array);}
+
   img_array.push(new_img); //add new img to array
+  text_array.push(user_string);
   console.log(img_array);
+  console.log(text_array);
 
   stringy_img_array = JSON.stringify(img_array); //stringify and store img_array into local storage
   localStorage.setItem('pic', stringy_img_array);
+  stringy_text_array = JSON.stringify(text_array);
+  localStorage.setItem('text', stringy_text_array);
 };
-
 save_button.addEventListener('click', local_storage);
+
+
 
 //object instantnation(necessary?)
 
@@ -167,11 +176,11 @@ var split_screen_left = function(event){
 
 right.addEventListener('click', split_screen_left);
 
-var submit = document.getElementById('submit');
+// var submit = document.getElementById('submit');
 
 function render_sigil(event){
   event.preventDefault();
-  var user_string = document.getElementById('text-input').value;
+  user_string = document.getElementById('text-input').value;
   console.log('user_string', user_string);
 
   var sigil_array = process_sigil(user_string);
@@ -179,6 +188,8 @@ function render_sigil(event){
   console.log(sigil_array);
   write_sigil(sigil_array);
 }
+
+
 
 // Saving sigils made into local storage
 
@@ -204,7 +215,7 @@ function change_color(render_color_theme){
   if(mood_value === 'happy'){
     ctx.strokeStyle = '#f4cb42';
 
-    sigil_space.style.backgroundImage = 'url(/img/happy.jpg)';
+    sigil_space.style.backgroundImage = 'url(/img/newhappy.jpg)';
 
   }else if(mood_value === 'chill'){
     ctx.strokeStyle = '#185096';
@@ -229,3 +240,4 @@ moods.addEventListener('submit', function(event){
 // set user generated sigil and user_string into local storage
 
 //init
+
