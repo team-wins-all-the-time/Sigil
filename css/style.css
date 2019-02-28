@@ -6,7 +6,7 @@ body{
   background: url('/img/dark.jpg')center center no-repeat;
   box-shadow:  inset 0 0 0 1000px var(--left-bg-color);
   background-size: cover;
-  height:1500px;
+  height:1900px;
   margin:0;
   padding:0;
 }
@@ -79,7 +79,7 @@ nav>ul:first-child{
   margin:auto;
   background-color:rgba(245, 246, 253,.2);
   width:1000px;
-  height:1000px;
+  height:600px;
   padding:20px; 
   border:2px solid rgb(241, 234, 243,.6);
   box-shadow: 0 15px 50px rgba(0,0,0,.5);
@@ -87,12 +87,12 @@ nav>ul:first-child{
 
 h2{
   font-size: 40px;
-  margin-left:200px;
   margin-bottom:35px;
   color: rgba(245, 246, 253,.5);
   font-weight: bold;
   font-family: 'Srisakdi', cursive;
   letter-spacing: 2px;
+  text-align: center;
 }
 
  section > img{
@@ -102,18 +102,28 @@ h2{
 }
 
  section{
-  /* width:250px; */
-  display:inline;
-  /* float:left;
-  padding:5%; */
-  
-}
-/* #img_one{
+  width:250px; 
   float:left;
+  padding:4%;
 }
 
-#img_two{
-  float:left;
-} */
+.sigil-info>section>h3{
+  color:white;
+  text-align: center;
+  margin-bottom:30px;
+  font-family: 'Arima Madurai', cursive;
+  text-transform:uppercase;
+  letter-spacing: 2px;
+}
+
+.sigil-info>section>p{
+  margin-top:20px;
+  text-align: center;
+  line-height: 20px;
+  font-family: 'Arima Madurai', cursive;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
 
 
