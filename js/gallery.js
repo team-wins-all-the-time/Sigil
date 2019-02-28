@@ -13,8 +13,6 @@ var retrieve_text = localStorage.getItem('text');
 var text_array = JSON.parse(retrieve_text);
 
 var target = document.getElementById('scrollmenu');
-var section_target = document.getElementById('scrollmenu');
-
 
 for(var i =0; i < img_array.length; i++){
   var section_el = document.createElement('section');
