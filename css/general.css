@@ -1,5 +1,6 @@
 :root{
     --button-hover-color: rgba(84, 76, 172, 0.5);
+    --left-bg-color: rgba(39, 8, 56, 0.85);
 }
 
 nav>ul>li>a>button:hover{
@@ -22,7 +23,6 @@ nav>ul>li>a>button{
 }
 
 nav{
-  /* position: absolute; */
   padding:1%;
   right:0%;
   margin-top:1;
