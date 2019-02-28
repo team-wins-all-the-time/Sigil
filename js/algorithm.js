@@ -73,6 +73,11 @@ var library ={
 
 function write_sigil(sigil_array){
   ctx.clearRect(0,0,400,500);
+  ctx.lineWidth = 2;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'miter';
+  ctx.shadowColor = (102, 102, 153, .75);
+  ctx.shadowBlur = 10;
   ctx.beginPath();
   for (var l = 0; l < sigil_array.length; l ++){
     if (sigil_array[l][1] === 'rect'){
