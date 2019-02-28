@@ -43,9 +43,14 @@ h1{
 #scrollmenu > section > h2{
     text-align: center;
     font-size:23px;
+    padding-top:20px;
     margin-bottom:20px;
     background-color:rgba(245, 249, 253, 0.4);
-    height:50px;
+    height:40px;
+    font-family: 'Arima Madurai', cursive;
+    text-transform:uppercase;
+    font-weight: bold;
+    color:white;
 
 }
 
