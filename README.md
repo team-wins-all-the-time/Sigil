@@ -21,9 +21,9 @@
 
 #Wireframe Images 
 
-![Page 1](https://github.com/team-wins-all-the-time/Sigil/blob/master/img/Notes_190222_164706_b95_1.jpg?raw=true)
-![Page 2](https://github.com/team-wins-all-the-time/Sigil/blob/master/img/Notes_190222_164644_d1c_1.jpg?raw=true)
-![Page 3](https://github.com/team-wins-all-the-time/Sigil/blob/master/img/Notes_190222_164612_90b_1.jpg?raw=true)
+![Page 1](/img/pageone.jpg)
+![Page 2](/img/pagetwo.jpg)
+![Page 3](/img/pagethree.jpg)
 
 ===
 #Conflict Plan
