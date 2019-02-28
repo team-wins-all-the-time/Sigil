@@ -91,13 +91,13 @@ function write_sigil(sigil_array){
       ctx.lineTo(sigil_array[l][0][2], sigil_array[l][0][3]);
     }
     else if (sigil_array[l][1] === 'tri'){
-      ctx.moveTo(sigil_array[l][0][0], sigil_array[l][0][1]);
+      ctx.lineTo(sigil_array[l][0][0], sigil_array[l][0][1]);
       ctx.lineTo(sigil_array[l][0][2], sigil_array[l][0][3]);
       ctx.lineTo(sigil_array[l][0][4], sigil_array[l][0][5]);
       ctx.closePath();
     }
     else if (sigil_array[l][1] === 'complex') {
-      ctx.moveTo(sigil_array[l][0][0], sigil_array[l][0][1]);
+      ctx.lineTo(sigil_array[l][0][0], sigil_array[l][0][1]);
       ctx.lineTo(sigil_array[l][0][2], sigil_array[l][0][3]);
       ctx.lineTo(sigil_array[l][0][4], sigil_array[l][0][5]);
       ctx.lineTo(sigil_array[l][0][6], sigil_array[l][0][7]);
