@@ -1,0 +1,35 @@
+:root{
+    --button-hover-color: rgba(84, 76, 172, 0.5);
+}
+
+nav>ul>li>a{
+  text-decoration: none;
+  color:black;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size:14px;
+}
+
+nav>ul>li:hover{
+  background-color: var(--button-hover-color);
+}
+
+nav>ul>li{
+  margin-bottom:6px;
+  width:200px;
+  height:25px;
+  background-color:rgba(245, 246, 253, 0.6);
+  padding:10px;
+  padding-top:20px;
+  text-align: center;
+  border:solid 2px white;
+}
+
+nav{
+  position: absolute;
+  padding:1%;
+  right:0%;
+  margin-top:1%;
+  overflow: hidden;
+}
