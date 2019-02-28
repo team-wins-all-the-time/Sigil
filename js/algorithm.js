@@ -222,8 +222,7 @@ function handle_mood(color_selection){
 
 function change_color(render_color_theme){
   if(mood_value === 'happy'){
-    ctx.strokeStyle = '#f4cb42';
-
+    ctx.strokeStyle = '#56350c';
     sigil_space.style.backgroundImage = 'url(/img/newhappy.jpg)';
 
   }else if(mood_value === 'chill'){
@@ -231,8 +230,8 @@ function change_color(render_color_theme){
     sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';
 
   }else if(mood_value === 'chaotic'){
-    ctx.strokeStyle = '#eae8ef';
-    sigil_space.style.backgroundImage = 'url(/img/chaotic3.jpg)';
+    ctx.strokeStyle = '#000';
+    sigil_space.style.backgroundImage = 'url(/img/chaotic4.jpg)';
 
   }else if(mood_value === 'sad'){
     ctx.strokeStyle = '#0a6077';
