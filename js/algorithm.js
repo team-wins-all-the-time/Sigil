@@ -72,6 +72,7 @@ var library ={
 };
 
 function write_sigil(sigil_array){
+
   ctx.clearRect(0,0,400,500);
   ctx.lineWidth = 1;
   ctx.lineCap = 'round';
@@ -222,7 +223,8 @@ function handle_mood(color_selection){
 
 function change_color(render_color_theme){
   if(mood_value === 'happy'){
-    ctx.strokeStyle = '#56350c';
+    ctx.strokeStyle = '#f4cb42';
+
     sigil_space.style.backgroundImage = 'url(/img/newhappy.jpg)';
 
   }else if(mood_value === 'chill'){
@@ -230,13 +232,16 @@ function change_color(render_color_theme){
     sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';
 
   }else if(mood_value === 'chaotic'){
-    ctx.strokeStyle = '#000';
-    sigil_space.style.backgroundImage = 'url(/img/chaotic4.jpg)';
+    ctx.strokeStyle = '#eae8ef';
+    sigil_space.style.backgroundImage = 'url(/img/chaotic3.jpg)';
 
   }else if(mood_value === 'sad'){
     ctx.strokeStyle = '#0a6077';
     sigil_space.style.backgroundImage = 'url(/img/sad3.jpg)';
+  } else{
+    ctx.strokeStyle = '#ffffff';
   }
+  
 }
 
 moods.addEventListener('submit', function(event){
