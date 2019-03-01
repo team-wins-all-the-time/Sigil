@@ -19,7 +19,7 @@ h1{
   margin-left:100px;
   color: rgba(247, 247, 248, 0.692);
   font-weight: bold;
-  font-family: 'Srisakdi', cursive;
+  font-family: 'Astloch', cursive;
   letter-spacing: 2px;
 }
 
@@ -61,7 +61,7 @@ nav>ul:first-child{
   font-size:28px;
   margin-left:30px; 
   width:880px;
-  font-family: 'Arima Madurai', cursive;
+  font-family: 'forum', cursive;
   color:rgba(255, 255, 255, 0.74);
 }
 
@@ -71,7 +71,7 @@ nav>ul:first-child{
   top:20px;
   left:20px;
   color:rgba(245, 246, 253,.8);
-  font-family: 'Arima Madurai', cursive;
+  font-family: 'forum', cursive;
   text-transform:uppercase;
   font-weight:bold;
 }
@@ -91,7 +91,7 @@ h2{
   margin-bottom:35px;
   color: rgba(245, 246, 253,.9);
   font-weight: bold;
-  font-family: 'Srisakdi', cursive;
+  font-family: 'Astloch', cursive;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -112,7 +112,7 @@ h2{
   color:white;
   text-align: center;
   margin-bottom:30px;
-  font-family: 'Arima Madurai', cursive;
+  font-family: 'forum', cursive;
   text-transform:uppercase;
   letter-spacing: 2px;
 }
@@ -121,10 +121,11 @@ h2{
   margin-top:20px;
   text-align: center;
   line-height: 20px;
-  font-family: 'Arima Madurai', cursive;
+  font-family: 'forum', cursive;
   letter-spacing: 1px;
   font-weight: bold;
   color:white;
+  letter-spacing: 2px;
 }
 
 
