@@ -43,14 +43,26 @@ nav{
     margin-bottom: 313%;
   }
 
- #aboutus ul > li {
+ #aboutus ul > li > p {
     text-align: center;
     display: inline-block;
     margin: 3em;
     font-size: 156%;
     font-family: 'Josefin Sans', sans-serif;
     color: white;
+    line-height: 10%;
+    
+}
+#aboutus{
+  overflow: hidden;
+  margin-left: 200px;
 } 
+
+section{
+  width:250px; 
+  float:left;
+  padding:4%;
+}
 
 #maintext {
 
@@ -67,11 +79,12 @@ img{
 }
 
  body{
-    background: url('/img/dark.jpg')center center no-repeat;
-    box-shadow:  inset 0 0 0 1000px var(--left-bg-color);
-    background-size: cover;
-    margin:0;
-    padding:0;
+  
+  background:url('/img/letter-background.jpg');
+  box-shadow:  inset 0 0 0 14000px rgba(81, 103, 201, 0.616);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
   }
   
   #source {
