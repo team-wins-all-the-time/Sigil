@@ -74,12 +74,13 @@ var library ={
 function write_sigil(sigil_array){
 
   ctx.clearRect(0,0,400,500);
-  ctx.lineWidth = 1;
+  ctx.lineWidth = 3;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'miter';
   ctx.shadowColor = (102, 102, 153, .75);
   ctx.shadowBlur = 10;
   ctx.beginPath();
+
   for (var l = 0; l < sigil_array.length; l ++){
     if (sigil_array[l][1] === 'rect'){
       ctx.rect(sigil_array[l][0][0], sigil_array[l][0][1], sigil_array[l][0][2], sigil_array[l][0][3]);
@@ -153,6 +154,8 @@ save_button.addEventListener('click', local_storage);
 var left = document.querySelector('.left');
 var right = document.querySelector('.right');
 var container = document.querySelector('.container');
+var flyText = document.querySelector('.fly-text');
+var xButton = document.querySelector('#xbutton');
 
 var target_left_arrow = document.getElementById('left-arrow');
 var target_right_arrow = document.getElementById('right-arrow');
@@ -160,6 +163,8 @@ var target_right_arrow = document.getElementById('right-arrow');
 left.addEventListener('click',() => {
   target_right_arrow.src = ('/img/right.png');
   container.classList.add('click-left');
+  flyText.style.opacity = '0';
+  xButton.style.opacity= '0';
 });
 
 var split_screen_right = function(event){
@@ -175,6 +180,8 @@ left.addEventListener('click',split_screen_right);
 right.addEventListener('click',() => {
   container.classList.add('click-right');
   target_left_arrow.src = ('/img/left.png');
+  flyText.style.opacity = '0';
+  xButton.style.opacity= '0';
 });
 
 var split_screen_left = function(event){
@@ -185,6 +192,11 @@ var split_screen_left = function(event){
 };
 
 right.addEventListener('click', split_screen_left);
+
+xButton.addEventListener('click', () => {
+  xButton.style.opacity= '0';
+  flyText.style.opacity = '0';
+});
 
 // var submit = document.getElementById('submit');
 
@@ -223,25 +235,25 @@ function handle_mood(color_selection){
 
 function change_color(render_color_theme){
   if(mood_value === 'happy'){
-    ctx.strokeStyle = '#f4cb42';
+    ctx.strokeStyle = '#000';
 
     sigil_space.style.backgroundImage = 'url(/img/newhappy.jpg)';
 
   }else if(mood_value === 'chill'){
-    ctx.strokeStyle = '#185096';
+    ctx.strokeStyle = '#000';
     sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';
 
   }else if(mood_value === 'chaotic'){
     ctx.strokeStyle = '#fff';
-    sigil_space.style.backgroundImage = 'url(/img/chaotic4.jpg)';
+    sigil_space.style.backgroundImage = 'url(/img/chaos.jpg)';
 
   }else if(mood_value === 'sad'){
-    ctx.strokeStyle = '#0a6077';
+    ctx.strokeStyle = '#000';
     sigil_space.style.backgroundImage = 'url(/img/sad3.jpg)';
   } else{
     ctx.strokeStyle = '#ffffff';
   }
-  
+
 }
 
 moods.addEventListener('submit', function(event){
