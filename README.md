@@ -56,4 +56,6 @@ Set MDN Page: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
 The Set data structure is vital for us, as it is the one line wonder that removes any duplicate letters from the user input.
 
 Help with Canvas stroke weight and color: http://perfectionkills.com/exploring-canvas-drawing-techniques/
+
+Inspiration for generator page split page design: https://codepen.io/bradtraversy/pen/dJzzdB
  
