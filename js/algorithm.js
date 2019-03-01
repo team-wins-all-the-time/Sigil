@@ -26,7 +26,7 @@ function random_number (max_num, min_num) {
 
 function process_sigil(string) {
   var user_array = Array.from(new Set(string.split('').map(letter => letter.toLowerCase())));
-  var to_remove = ['a','e','i','o','u','.','!',',',' ','/'];
+  var to_remove = ['a','e','i','o','u','.','!',',',' ','/', ';', '*', '&', '^', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
   user_array = user_array.filter(letter => !to_remove.includes(letter));
   var sigil_array = [];
   for (var i = 0; i < user_array.length; i++){
@@ -72,7 +72,6 @@ var library ={
 };
 
 function write_sigil(sigil_array){
-
   ctx.clearRect(0,0,400,500);
   ctx.lineWidth = 3;
   ctx.lineCap = 'round';
@@ -136,8 +135,7 @@ var local_storage = function(event){
 
   img_array.push(new_img); //add new img to array
   text_array.push(user_string);
-  console.log(img_array);
-  console.log(text_array);
+
 
   stringy_img_array = JSON.stringify(img_array); //stringify and store img_array into local storage
   localStorage.setItem('pic', stringy_img_array);
@@ -145,10 +143,6 @@ var local_storage = function(event){
   localStorage.setItem('text', stringy_text_array);
 };
 save_button.addEventListener('click', local_storage);
-
-
-
-//object instantnation(necessary?)
 
 //event lisiteners
 var left = document.querySelector('.left');
@@ -203,17 +197,13 @@ xButton.addEventListener('click', () => {
 function render_sigil(event){
   event.preventDefault();
   user_string = document.getElementById('text-input').value;
-  console.log('user_string', user_string);
+
 
   var sigil_array = process_sigil(user_string);
 
-  console.log(sigil_array);
+
   write_sigil(sigil_array);
 }
-
-
-
-// Saving sigils made into local storage
 
 //radio buttons
 var moods = document.getElementById('form');
@@ -250,10 +240,7 @@ function change_color(render_color_theme){
   }else if(mood_value === 'sad'){
     ctx.strokeStyle = '#000';
     sigil_space.style.backgroundImage = 'url(/img/sad3.jpg)';
-  } else{
-    ctx.strokeStyle = '#ffffff';
   }
-
 }
 
 moods.addEventListener('submit', function(event){
