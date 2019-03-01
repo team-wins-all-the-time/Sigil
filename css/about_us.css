@@ -1,22 +1,82 @@
-h1 {
+   h1 {
     text-align: center;
     margin: auto;
-    font-size: 40px;
-    /* background-color: blue; */
+    font-size: 100px;
+    font-family: 'Almendra Display', cursive;
+    color: white;
+    
+}  
+
+:root{
+    --button-hover-color: rgba(84, 76, 172, 0.5);
+    --left-bg-color: rgba(39, 8, 56, 0.85);
 }
 
+nav>ul>li>a>button:hover{
+  background-color: var(--button-hover-color);
+}
 
-ul > li {
+nav>ul>li>a>button{
+  text-decoration: none;
+  color:white;
+  font-weight:bold;
+  text-transform: uppercase;
+  font-size:16px;
+  width: 200px;
+  height:50px;
+  background-color:rgba(245, 246, 253, 0.4);
+  border:2px solid rgb(241, 234, 243,.6);
+  margin-top:10px;
+  font-family: 'Arima Madurai', cursive;
+  letter-spacing: 2px;
+}
+
+nav{
+  padding:1%;
+  right:0%;
+  margin-top:1;
+  overflow: hidden;
+  text-align: right;
+}
+  
+  #header{
+    margin-bottom:50px;
+  }
+
+ #aboutus ul > li {
     text-align: center;
     display: inline-block;
     margin: 70px;
-}
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+} 
 
 #maintext {
-    margin-bottom: 0%;
+
+    font-size: 27px;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 img{
     width:290px;
     height:300px;
+    border-radius: 50%;
 }
+
+ body{
+    background: url('/img/dark.jpg')center center no-repeat;
+    box-shadow:  inset 0 0 0 1000px var(--left-bg-color);
+    background-size: cover;
+    margin:0;
+    padding:0;
+  }
+  
+  #source {
+    margin-top: 30px;
+    border: 10px solid #000;
+    color: white;
+  }
+
