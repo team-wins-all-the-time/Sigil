@@ -26,7 +26,7 @@ function random_number (max_num, min_num) {
 
 function process_sigil(string) {
   var user_array = Array.from(new Set(string.split('').map(letter => letter.toLowerCase())));
-  var to_remove = ['a','e','i','o','u','.','!',',',' ','/', ';', '*', '&', '^', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+  var to_remove = ['a','e','i','o','u','.','!',',',' ','/'];
   user_array = user_array.filter(letter => !to_remove.includes(letter));
   var sigil_array = [];
   for (var i = 0; i < user_array.length; i++){
@@ -72,6 +72,7 @@ var library ={
 };
 
 function write_sigil(sigil_array){
+
   ctx.clearRect(0,0,400,500);
   ctx.lineWidth = 1;
   ctx.lineCap = 'round';
@@ -134,7 +135,8 @@ var local_storage = function(event){
 
   img_array.push(new_img); //add new img to array
   text_array.push(user_string);
-
+  console.log(img_array);
+  console.log(text_array);
 
   stringy_img_array = JSON.stringify(img_array); //stringify and store img_array into local storage
   localStorage.setItem('pic', stringy_img_array);
@@ -142,6 +144,10 @@ var local_storage = function(event){
   localStorage.setItem('text', stringy_text_array);
 };
 save_button.addEventListener('click', local_storage);
+
+
+
+//object instantnation(necessary?)
 
 //event lisiteners
 var left = document.querySelector('.left');
@@ -180,17 +186,22 @@ var split_screen_left = function(event){
 
 right.addEventListener('click', split_screen_left);
 
+// var submit = document.getElementById('submit');
 
 function render_sigil(event){
   event.preventDefault();
   user_string = document.getElementById('text-input').value;
-
+  console.log('user_string', user_string);
 
   var sigil_array = process_sigil(user_string);
 
-
+  console.log(sigil_array);
   write_sigil(sigil_array);
 }
+
+
+
+// Saving sigils made into local storage
 
 //radio buttons
 var moods = document.getElementById('form');
@@ -212,7 +223,8 @@ function handle_mood(color_selection){
 
 function change_color(render_color_theme){
   if(mood_value === 'happy'){
-    ctx.strokeStyle = '#56350c';
+    ctx.strokeStyle = '#f4cb42';
+
     sigil_space.style.backgroundImage = 'url(/img/newhappy.jpg)';
 
   }else if(mood_value === 'chill'){
@@ -226,7 +238,10 @@ function change_color(render_color_theme){
   }else if(mood_value === 'sad'){
     ctx.strokeStyle = '#0a6077';
     sigil_space.style.backgroundImage = 'url(/img/sad3.jpg)';
+  } else{
+    ctx.strokeStyle = '#ffffff';
   }
+  
 }
 
 moods.addEventListener('submit', function(event){
