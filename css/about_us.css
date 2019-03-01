@@ -2,7 +2,7 @@
     text-align: center;
     margin: auto;
     font-size: 600%;
-    font-family: 'Almendra Display', cursive;
+    font-family: 'Astloch', cursive;
     color: white;
     
 }  
@@ -27,7 +27,7 @@ nav>ul>li>a>button{
   background-color:rgba(245, 246, 253, 0.4);
   border:.13em solid rgb(241, 234, 243,.6);
   margin-top:.63em;
-  font-family: 'Arima Madurai', cursive;
+  font-family: 'forum', cursive;
   letter-spacing: .13em;
 }
 
@@ -48,7 +48,7 @@ nav{
     display: inline-block;
     margin: 3em;
     font-size: 156%;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'forum', sans-serif;
     color: white;
     line-height: 10%;
     
@@ -68,7 +68,7 @@ section{
 
     font-size: 1.69em;
     color: white;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'forum', sans-serif;
 
 }
 
