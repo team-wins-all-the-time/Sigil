@@ -1,6 +1,6 @@
 :root{
   --container-bg-color: #333;
-  --left-bg-color: rgba(44, 9, 65, 0.8);
+  --left-bg-color: rgba(230, 214, 240, 0.3);
   --right-bg-color:rgba(196, 215, 224, 0.3);
   --button-hover-color: rgba(84, 76, 172, 0.5);
   --hover-width: 100%;
@@ -133,7 +133,7 @@ h1{
 }
 
 #generator{
-  background:rgba(0, 0, 0, 0.9);
+  background:rgba(41, 39, 39, 0.8);
   background-image: "";
 }
 

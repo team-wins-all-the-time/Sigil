@@ -230,7 +230,7 @@ function change_color(render_color_theme){
     sigil_space.style.backgroundImage = 'url(/img/chill.jpg)';
 
   }else if(mood_value === 'chaotic'){
-    ctx.strokeStyle = '#000';
+    ctx.strokeStyle = '#fff';
     sigil_space.style.backgroundImage = 'url(/img/chaotic4.jpg)';
 
   }else if(mood_value === 'sad'){

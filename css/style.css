@@ -1,5 +1,5 @@
 :root{
-  --left-bg-color: rgba(39, 8, 56, 0.85);
+  --left-bg-color: rgba(145, 169, 235, 0.85);
 }
 
 body{
@@ -17,7 +17,7 @@ h1{
   float:left;
   margin-top:60px;
   margin-left:100px;
-  color: rgba(245, 246, 253,.5);
+  color: rgba(247, 247, 248, 0.692);
   font-weight: bold;
   font-family: 'Srisakdi', cursive;
   letter-spacing: 2px;
@@ -70,7 +70,7 @@ nav>ul:first-child{
   position: relative;
   top:20px;
   left:20px;
-  color:rgba(245, 246, 253,.5);
+  color:rgba(245, 246, 253,.8);
   font-family: 'Arima Madurai', cursive;
   text-transform:uppercase;
 }
@@ -88,7 +88,7 @@ nav>ul:first-child{
 h2{
   font-size: 40px;
   margin-bottom:35px;
-  color: rgba(245, 246, 253,.5);
+  color: rgba(245, 246, 253,.9);
   font-weight: bold;
   font-family: 'Srisakdi', cursive;
   letter-spacing: 2px;
