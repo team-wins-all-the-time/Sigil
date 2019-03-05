@@ -13,9 +13,9 @@ body{
 
 h1{
   font-size:80px;
-  padding:3%;
+  padding:7%;
   float:left;
-  margin-top:60px;
+  margin-top:0px;
   margin-left:100px;
   color: rgba(247, 247, 248, 0.692);
   font-weight: bold;
@@ -128,5 +128,8 @@ h2{
   letter-spacing: 2px;
 }
 
+.imgs{
+  box-shadow:  inset 0 0 0 1000px var(--left-bg-color);
+}
 
 

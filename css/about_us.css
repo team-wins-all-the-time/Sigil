@@ -1,7 +1,7 @@
    h1 {
     text-align: center;
     margin: auto;
-    font-size: 600%;
+    font-size: 650%;
     font-family: 'Astloch', cursive;
     color: white;
     
@@ -73,23 +73,33 @@ section{
 }
 
 img{
-    width:11.13em;
-    height:11.75em;
+    width:16.13em;
+    height:16.75em;
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
  body{
   
-  background:url('/img/letter-background.jpg');
-  box-shadow:  inset 0 0 0 14000px rgba(81, 103, 201, 0.616);
+  background:url('/img/3.jpg');
+  box-shadow: inset 0 0 0 1000px rgba(145, 187, 235, 0.678);
   background-size: cover;
   margin: 0;
   padding: 0;
+  height:100%;
   }
   
   #source {
     margin-top: 1.88em;
     border: .63em solid #000;
     color: white;
+  }
+
+  p{
+    line-height:30px;
+    text-align: center;
+    font-family: forum;
+    color:white;
+    font-size:18px;
   }
 
