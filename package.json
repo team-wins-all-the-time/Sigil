@@ -1,0 +1,31 @@
+{
+  "name": "sigil",
+  "version": "1.0.0",
+  "description": "the files for sigilicious, a delightful app for sigil generation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-wins-all-the-time/Sigil.git"
+  },
+  "keywords": [
+    "sigil",
+    "magic",
+    "chaos",
+    "magic"
+  ],
+  "author": "Team Wins All the Time",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/team-wins-all-the-time/Sigil/issues"
+  },
+  "homepage": "https://github.com/team-wins-all-the-time/Sigil#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "require": "^2.4.20"
+  }
+}
